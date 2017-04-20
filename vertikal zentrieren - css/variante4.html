@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 
-<!--Diese Variante ist anwendbar wenn die Höhe des zu zentrierten Elements bekannt bzw. fest definiert ist -->
+<!--Diese Variante bassiert auf CSS 2.1 und wird mit dem "display: table" realisiert. Im Beispiel machen wir das html-Element zu einer Tabelle, body wird zu einer Tabelenzelle und das Element selber das zentriert werden soll braucht keine besonderen Angaben ! -->
 
 <html lang="de">
 
-    <head>
-        <title>Variante 1</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Variante 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <style type="text/css">
-            .zentriert {
-                background-color: orange;
-                width: 100%;
-                height: 200px;  /* Höhe ist definiert*/
-                line-height: 200px;
-                text-align: center;
-                position: absolute;
-                top: 50%;
-                margin-top: -100px;
+    <style type="text/css">
+        html {
+            height: 100%;
+            display: table;
+            width: 100%;
+        }
+        
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        .zentriert {
+            background-color: orange;
+            text-align: center;
+            /*  */
+        }
+    </style>
+</head>
 
-                /*-100 px da die Hälft von Höhe (200px) 
-                die -100px für margin-top ergeben.
-                Position absolute bedeutet von der oberen Kante ausgehend. D.h. die obere Kante rutscht bis zur Hälfte und muss nach oben korrigiert werden mit margin-top: Minuswert in px */
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="zentriert">ich bin zentriert</div>
-    </body>
+<body>
+    <div class="zentriert">ich bin zentriert</div>
+</body>
 
 </html>

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 
-<!--Diese Variante ist anwendbar wenn die Höhe des zu zentrierten Elements bekannt bzw. fest definiert ist -->
+<!-- Ähnlich wie bei Variante 2 , mit position absolute statt relative und die obergeordnetes Element braucht auch keine Höhe!! Funktioniert -->
 
 <html lang="de">
 
     <head>
-        <title>Variante 1</title>
+        <title>Variante 3</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style type="text/css">
             .zentriert {
                 background-color: orange;
-                width: 100%;
-                height: 200px;  /* Höhe ist definiert*/
-                line-height: 200px;
                 text-align: center;
+                width: 100%;
                 position: absolute;
                 top: 50%;
-                margin-top: -100px;
+                -ms-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
 
                 /*-100 px da die Hälft von Höhe (200px) 
                 die -100px für margin-top ergeben.
@@ -28,7 +28,7 @@
     </head>
 
     <body>
-        <div class="zentriert">ich bin zentriert</div>
+        <div class="zentriert"><p>ich bin <br /> zentriert</p></div>
     </body>
 
 </html>
