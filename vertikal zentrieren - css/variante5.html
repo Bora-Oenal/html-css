@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!--Diese Variante wenn Höhe und Breite des zu zentrierten Elements unbekannt ! -->
+<!--Diese Variante wenn Höhe und Breite des zu zentrierten Elements unbekannt bzw sich ändert!! gut für responsive ! -->
 
 <html lang="de">
 
@@ -10,20 +10,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style type="text/css">
-        html {
+        html,
+        body {
+            font-family: Calibri;
             height: 100%;
-            display: table;
             width: 100%;
+            /* Entfernung der Innen- und Aussen-
+            abstände */
+            padding: 0;
+            margin: 0;
         }
+        /* Wir können das Body-Element ebenfalls zu einem flexbox-container machen -> mit display: flex*/
         
         body {
-            display: table-cell;
-            vertical-align: middle;
+            display: -webkit-flex;
+            display: flex;
+            
+            /* Mit align-items wird das Element  vertikal zentriert*/
+            -webkit-align-items: center;
+            align-items: center;
+            
+            
+            /* justify content wird das Element   horizontal zentriert*/
+            -webkit-justify-content: center;
+            justify-content: center;
         }
         
         .zentriert {
-            background-color: orange;
-            text-align: center;
+            background-color: #69c0f7;
+            color: #fff;
+            width: 80%;
+            max-width: 940px;
+            border: 1px dotted #063389;
+            padding: 20px;
             /*  */
         }
     </style>
