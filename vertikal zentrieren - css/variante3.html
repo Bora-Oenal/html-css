@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <title>Variante 3</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
-<body>
-    
-</body>
+<!--Diese Variante ist anwendbar wenn die Höhe des zu zentrierten Elements bekannt bzw. fest definiert ist -->
+
+<html lang="de">
+
+    <head>
+        <title>Variante 1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style type="text/css">
+            .zentriert {
+                background-color: orange;
+                width: 100%;
+                height: 200px;  /* Höhe ist definiert*/
+                line-height: 200px;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                margin-top: -100px;
+
+                /*-100 px da die Hälft von Höhe (200px) 
+                die -100px für margin-top ergeben.
+                Position absolute bedeutet von der oberen Kante ausgehend. D.h. die obere Kante rutscht bis zur Hälfte und muss nach oben korrigiert werden mit margin-top: Minuswert in px */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="zentriert">ich bin zentriert</div>
+    </body>
+
 </html>
