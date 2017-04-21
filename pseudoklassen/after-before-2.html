@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<!--before und after dienen dazu um Inhalte (z.B. Bilder, Icons, Atrributwerte, ...) VOR bzw. NACH dem eigentlichem Inhalt (HTML Element) zu platzieren  -->
+<!--beide brauchen die Eigenschaft "content" mit der die Inhalte eingefügt werden -->
+<!-- Bsp.: a::after{ content:" ";} -->
+<!-- Bei Zeichen    { content:" (Link) ";} -->
+<!-- Bei Bildern    { content: url(bild.png);} -->
+<!-- Unicodezeichen   { content: "\2713"} -->
+<!-- Attributwerte   { content: attr(href)} -->
+<!-- Beispiel: a[href]::after{ content: attr(href) ;     bedeutet das nach dem Element der Link als Wert ausgegeben wird }-->
+
+<html lang="de">
+
+<head>
+    <title>before after Pseudo Elemente</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body {
+            width: 50%;
+            margin: 0 auto;
+            font-family: sans-serif;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            text-indent: -2.4rem;
+                                            /* Mit text-indent kann die erste Zeile eines Absatzes eingerückt werden. 
+                                            Auch eine „Textausrückung“ nach links ist möglich, dann muß man einen negativen Wert für »text-indent« verwenden. */
+        }
+        
+        li::before {
+            content: " \2713\00A0";         /* \00A0 steht für Unicode Leerzeichen */
+            color: darkred;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        a:hover, a:focus {text-decoration: underline;}
+        
+        a::after {                      /* \00A0 steht für Unicode Leerzeichen */
+            content: " \2192";
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="http://www.boraoenal.com/">Meine Webseite</a></li>
+        <li><a href="https://twitter.com/webmundo_?lang=de">Mein Twitteraccount</a></li>
+        <li>"Um loszulegen muss man aufhören zu Reden und anfangen zu Handeln"<i> Walt Disney</i>. "Es ist nicht wenig Zeit, die wir haben, sondern es ist viel Zeit, die wir nicht nutzen"<i> Lucius Annaeus Seneca</i>. </li>
+    </ul>
+
+</body>
+
+</html>
