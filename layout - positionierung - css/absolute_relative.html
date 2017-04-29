@@ -1,0 +1,51 @@
+<!-- Absolute in Kombination mit Relative. Wird zum Beispiel bei DropDowns-Menüs verwendet -->
+
+<!-- In Verschachtelten verwendet man gerne die Kombination aus absolute und relative. Das übergeordnete Element hat dabei die position Relative und das Element innerhalb hat absolute. Der Bezugspunkt ist der obererste Punkt ganz links des übergeprdneten Elements -->
+
+
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <title>Absolute in Kombination mit Relative</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body {
+            font-family: Verdana;
+        }
+        
+        .beschriftung {
+            position: relative;
+        }
+        
+        .beschriftung img {
+        }
+        
+        .beschriftung span {
+            background-color: black;
+            color: #fff;
+            width: 600px;
+            height: 50px;
+            text-align: center;
+            line-height: 2.5em;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Beschriftung</h2>
+    <div class="beschriftung">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe2hbHL9Qj63VL-WZkYwQot-vGsTXdi1qvjldmMkc5vnLAu2Q" alt="leopard" width="600px" height="300px" />
+        <span>Ein Leopard</span>
+        </div>
+
+
+</body>
+
+</html>
