@@ -1,0 +1,70 @@
+<!-- position: absolute: -->
+<!-- mit der CSS-Eigenschaft "position" können Elemente verschoben werden. absolute: -->
+
+<!--bedeutet: "Verschiebe das Element vom ganzem Screen ausgehend ganz links oben!"
+Bezugspunkt ist also der Rand des Browserfensters!
+-->
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <title>Absolute</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body {
+            background-color: #FFF;
+            color: #312D2A;
+            font: 130% sans serif;
+        }
+        
+        div {
+            font-size: 20px;
+            width: 300px;
+            color: #DDCDC1;
+            border: dotted 1px;
+            padding: 50px;
+        }
+        
+        #box1 {
+            background-color: #55791d;
+        }
+        
+        #box2 {
+            background-color: orange;
+            color: #312d2A;
+            position: absolute;
+            /* bedeutet: "Verschiebe das Element vom ganzem Screen ausgehend ganz links oben!"
+            Bezugspunkt ist also der Rand des Browserfensters! */
+            top: 50px;
+            left: 200px;
+        }
+        
+        #box3 {
+            background-color: cadetblue;
+            color: #ffcccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box1">
+        <h1>Box 1</h1>
+    </div>
+    <div id="box2">
+        <h1>Box 2</h1>
+    </div>
+    <div id="box3">
+        <h1>Box 3</h1>
+    </div>
+    <h1>Lorem Ipsum</h1>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam etLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam etLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam etLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam etLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+</body>
+
+</html>

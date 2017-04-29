@@ -1,0 +1,79 @@
+<!-- position: absolute: -->
+<!-- mit der CSS-Eigenschaft "position" können Elemente verschoben werden. absolute: -->
+
+<!--bedeutet: "Verschiebe das Element vom ganzem Screen ausgehend ganz links oben!"
+Bezugspunkt ist also der Rand des Browserfensters!
+-->
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <title>Absolute 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body {
+            background-color: #FFF;
+            color: #0d0b09;
+            font: 130% sans serif;
+        }
+        
+        header {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: orange;
+            color: black;
+            width: 960px;
+            height: 80px;
+            border-bottom: 2px #fff solid;
+            padding: 20px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        nav {
+            background-color: gainsboro;
+            width: 300px;
+            padding-top: 40px;
+            position: absolute;
+            top: 122px;
+            left: 0;
+            height: 430px;
+        }
+        
+        nav ul li {
+            list-style: none;
+        }
+        
+        #inhalt {
+            color: #cb0808;
+            background-color: #ffff6b;
+            width: 560px;
+            position: absolute;
+            height: 370px;
+            top: 122px;
+            left: 300px
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="#">Startseite</a></li>
+            <li><a href="#">Informationen</a></li>
+            <li><a href="#">Impressum</a></li>
+        </ul>
+    </nav>
+    <div id="inhalt">
+        <h1>Content</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,scing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+    </div>
+</body>
+
+</html>
