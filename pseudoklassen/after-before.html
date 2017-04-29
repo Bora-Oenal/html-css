@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!--before und after dienen dazu um Inhalte (z.B. Bilder, Icons, Atrributwerte, ...) VOR bzw. NACH dem eigentlichem Inhalt (HTML Element) zu platzieren  -->
+<!--beide brauchen die Eigenschaft "content" mit der die Inhalte eingefügt werden -->
+<!-- Bsp.: a::after{ content:" ";} -->
+<!-- Bei Zeichen    { content:" (Link) ";} -->
+<!-- Bei Bildern    { content: url(bild.png);} -->
+<!-- Unicodezeichen   { content: "\2713"} -->
+<!-- Attributwerte   { content: attr(href)} -->
+<!-- Beispiel: a[href]::after{ content: attr(href) ;     bedeutet das nach dem Element der Link als Wert ausgegeben wird }-->
+
+<html lang="de">
+
+<head>
+    <title>before after Pseudelemente</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        ul {
+            list-style: none;
+        }
+        
+        li::after {
+            content: attr(data-label);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li data-label="todo">Buy Milk</li>
+    </ul>
+
+</body>
+
+</html>
