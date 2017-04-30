@@ -1,0 +1,94 @@
+<!-- In diesem Dokument sind die Elemente immer nebeneinander angeordnet, jedoch jedesmal mit einer anderen Technik realisert! -->
+
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <title>Layouten mit CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body {
+            font-family: Verdana;
+            font-size: 90%;
+        }
+        
+        div {
+            width: 300px;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        div:nth-child(1) {
+            background-color: aqua;
+        }
+        
+        div:nth-child(2) {
+            background-color: yellow;
+        }
+        
+        .absolute {
+            position: relative;
+            /*Die Elemente innerhalb dieser Klasse haben Position Relative */
+            width: 600px;
+        }
+        
+        .table {
+            display: table;
+        }
+        
+        .flexbox {
+            display: flex;
+            -webkit-flex;
+        }
+        
+        .inline-block {
+            width: 600px;
+            inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- bei position und float haben wir den Nachteil das wir immer wissen müssten wie hoch die Elemente sind damit diese gleich groß sind. float und position nicht fürs Layouten gedacht sondern fürs Platzieren kleiner Elemente-->
+    <!-- position relative und absolute ist nicht fürs Layouten gedacht sondern zum Platzieren kleiner Elemente, z.B. Icons oder z.B. Vor-/Rücktaste im Datepicker-->
+    Position Absolute und Relative in Kombination
+    <section class="absolute">
+        <div style="position:absolute; left:0; top:0px;">Lorem ipsum ist doch immer dasselbe mit dir AlteLorem ipsum ist doch immer dasselbe mit dir Alter</div>
+        <div style="position:absolute; left:300px; top:0px;">Lorem Lorem ipsum ist</div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/> Float-Methode. Nachteil: Bei mehreren Spalten sind diese nicht gleich hoch und
+    <br/> gefloatete Elemente werden nicht umschlossen! Siehe Beispiel
+    <section>
+        <div style="float: left;">Lorem ipsum ist doch immer dasselbe mit dir AlteLorem ipsum ist doch immer dasselbe mit dir Alter</div>
+        <div style="margin-left:300px">Lorem ipsum ist</div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <br/> Inline-Block
+    <section class="inline-block">
+        <div style="display: inline-block; vertical-align: middle; width: 290px;">Lorem ipsum ist doch immer dasselbe mit dir Altir AlteLorem ipsum ist doch immer dasselbe mit dir Alter</div>
+        <div style="display: inline-block; vertical-align: middle; width: 290px;">Lorem ipsum ist doch immer dasselbe mit dir AlteLorem ipsum ist doch immer dasselbe mit di</div>
+    </section>
+    <br/> Display Table
+    <!-- Durch Display table Verhalten wie in einer Tabelle. Durch Display: table-cell werden diese zur Tebellenzellen mit gleicher Höhen -->
+    <section class="table">
+        <div style="display: table-cell;">Lorem ipsum ist doch immer dasselbe mit dir AlteLorem ipsum ist doch immer dasselbe mit dir Alterrrrrrrrrrrrrrrrrrrrrrrrrrrr</div>
+        <div style="display: table-cell;">Trotz wenig Inhalt haben Spalten selbe Höhe</div>
+    </section>
+    <!-- Wunderwaffe Flexbox. -->
+    <br/> Display Flexbox
+    <section class="flexbox">
+        <div style="">Lorem ipsum ist doch immer dasselbe mit dir AlteLoorem ipsum ist doch immer dasselbe mit dir AlteLoorem ipsum ist doch immer dasselbe mit dir AlteLorem ipsum ist doch immer dasselbe mit dir Alter</div>
+        <div>Lorem ipsum ist doch immer dasselbe mit dir AlteLorem ipsum ist doch immer dasselbe mit di</div>
+    </section>
+</body>
+
+</html>

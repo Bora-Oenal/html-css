@@ -1,0 +1,80 @@
+<!-- Mit CSS-Tabellen können Sie ganz einfach Zweispalter oder Dreispalter realisieren. Die Spalten sind dabei automatisch gleich hoch.-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Mit Display: Table layouten</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            font-family: Verdana;
+            color: red;
+        }
+        
+        .container {
+            display: table;
+        }
+        
+        .inhalt {
+            display: table-cell;
+            width: 60%;
+            background-color: #f5ff00;
+        }
+        
+        header {
+            background-color: cadetblue;
+            height: 100px;
+            width: 100%;
+        }
+        
+        nav {
+            background-color: #e0dbdb;
+            display: table-cell;
+            width: 30%;
+        }
+        
+        nav ul {
+            list-style: none;
+        }
+        
+        nav ul a {
+            color: darkred;
+        }
+        
+        h2 {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- bei position und float haben wir den Nachteil  Elemente -->
+    <header>
+        <h2>Header</h2>
+
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Informationen</a></li>
+                <li><a href="#">Impressum</a></li>
+            </ul>
+        </nav>
+        <div class="inhalt">
+            <h2>Content</h2>
+            <p>Programmieren Sie dynamische, interaktive Anwendungen für das Web 2.0 – mit einem der populärsten JavaScript- bzw. AJAX-Frameworks. Ralph Steyer erklärt, wie jQuery im Kern funktioniert und wie Sie die visuellen und funktionalen Möglichkeiten des Frameworks eindrucksvoll in die Praxis umsetzen.</p>
+            <br />
+            <p>Programmieren Sie dynamische, interaktive Anwendungen für das Web 2.0 – mit einem der populärsten JavaScript- bzw. AJAX-Frameworks. Ralph Steyer erklärt, wie jQuery im Kern funktioniert und wie Sie die visuellen und funktionalen Möglichkeiten des Frameworks eindrucksvoll in die Praxis umsetzen.>Programmieren Sie dynamische, interaktive Anwendungen für das Web 2.0 – mit einem der populärsten JavaScript- bzw. AJAX-Frameworks. Ralph Steyer erklärt, wie jQuery im Kern funktioniert und wie Sie die visuellen und funktionalen Möglichkeiten des Frameworks eindrucksvoll in die Praxis umsetzen.</p>
+            <h2>Content</h2>
+            <p>Programmieren Sie dynamische, interaktive Anwendungen für das Web 2.0 – mit einem der populärsten JavaScript- bzw. AJAX-Frameworks. Ralph Steyer erklärt, wie jQuery im Kern funktioniert und wie Sie die visuellen und funktionalen Möglichkeiten des Frameworks eindrucksvoll in die Praxis umsetzen.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
